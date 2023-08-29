@@ -1,0 +1,36 @@
+img{
+  height: 1.5rem;
+}
+span{
+  padding-left: 0.5rem;
+  color: white;
+}
+
+.itemCount span{
+  color: black;
+  padding: 1rem;
+}
+
+.bloques{
+  display: flex;
+  flex-wrap: wrap;
+
+}
+
+.bloque{
+  display: flexbox;
+  flex-wrap: wrap-reverse;
+
+}
+
+.card-img-top{
+  height: 200px;
+}
+.imgdetalles{
+  height: 300px;
+  width: 300px;
+}
+
+.precios{
+  text-decoration: underline;
+}
