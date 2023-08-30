@@ -27,7 +27,7 @@ useEffect(() => {
             setProducts(productFiltered)
         }
         });
-    }, []);
+    }, [id]);
 
     return (
         <Container className='mt-4'>
