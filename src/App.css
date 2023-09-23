@@ -34,3 +34,8 @@ span{
 .precios{
   text-decoration: underline;
 }
+
+.detalless{
+  display: flex;
+  flex-wrap: wrap;
+}

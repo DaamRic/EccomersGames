@@ -1,20 +1,25 @@
-import { BrowserRouter, Routes , Route } from 'react-router-dom';
-import './App.css';
-import { ContenedorItem } from './components/itemListContainer';
-import { ItemDetailContainer } from './components/ItemDetailContainer';
+import { BrowserRouter, Routes , Route} from 'react-router-dom';
 import { NavBar } from './components/NavBar';
+import './App.css';
+import { ItemDetailContainer } from './components/ItemDetailContainer';
+import { ItemListContainer } from './components/itemListContainer';
+import { Cart } from './components/Cart';
+import { CartProvider } from './contexts/CartContext';
 
 function App() {
-  return ( <>
+  return ( 
+    <CartProvider>
     <BrowserRouter>
-    <NavBar />
-    <Routes>
-    <Route path="/" element ={<ContenedorItem greeting="EccomersGames" />} />
-    <Route path="/category/:id" element ={<ContenedorItem greeting="EccomersGames" />} />
-    <Route path="/item/:id" element ={<ItemDetailContainer />} />
+    <NavBar/>
+      <Routes>
+      <Route path="/" element ={<ItemListContainer greeting="EccomersGames"/>} />
+      <Route path="/Cart" element ={<Cart />} />
+      <Route path="/Category/:id" element ={<ItemListContainer greeting="Componentes" />} />
+
+      <Route path="/Item/:id" element ={<ItemDetailContainer />} />
     </Routes>
     </BrowserRouter>
-    </>
+    </CartProvider>
   );
 }
 
